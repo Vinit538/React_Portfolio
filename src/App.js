@@ -11,6 +11,7 @@ import LeftNavbar from './NavbarComponent/LeftNavbar';
 import RightNavbar from './NavbarComponent/RightNavbar';
 import './App.css';
 import Home from './Home';
+import Learned from './LearnedComponent/Learned';
 
 function App() {
   const isMobile = useMediaQuery({ maxWidth: 1050 });
@@ -30,6 +31,7 @@ function App() {
                   <Route path="/" element={<TitlePage />} />
                   <Route path="/about_me" element={<About_Me />} />
                   <Route path="/project" element={<Projects />} />
+                  <Route path='/learned' element={<Learned />} />
                   <Route path="/education" element={<Education />} />
                 </Routes>
               </Col>
@@ -44,8 +46,10 @@ function App() {
                 <Route path="/" element={<TitlePage />} />
                 <Route path="/about_me" element={<About_Me />} />
                 <Route path="/project" element={<Projects />} />
+                <Route path='/learned' element={<Learned />} />
                 <Route path="/education" element={<Education />} />
               </Routes>
+             <LeftNavbar />
             </Col>
           )}
         </Row>

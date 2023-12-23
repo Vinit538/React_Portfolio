@@ -1,0 +1,174 @@
+  @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+
+ 
+
+  .ThingsLearned{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.CardSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.LHeadingCard{
+    width: 400px;
+    height: 200px;
+    justify-items: center;
+    align-items: center;
+    font-family: Yatra One;
+    box-shadow: 0 0 20px #00000033;
+    
+}
+.LHeadingCardText{
+    position: relative;
+    top: 25%;
+    font-size: 70px;
+    text-align: center;
+    background: linear-gradient(to right, #6A82FB 0%, #FC5C7D 51%, #6A82FB 100%);
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    row-gap: 0;
+    transition: 0.9s;
+  }
+  
+  .LHeadingCard:hover +.LHeadingCardText {
+    background-position: right center;
+    color: transparent;
+    text-decoration: none;
+  }
+
+.LContentCard{
+    box-shadow: 0 0 20px #00000033;
+    width: 350px;
+    height: auto;
+    padding: 40px;
+    background-color: #15315f;
+    font-family: 'Share Tech', sans-serif;
+    color: #008B8B;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon{
+    color: aqua;
+  }
+
+ 
+  
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .LHeadingCard{
+        width: 300px;
+        height: 200px;
+    }
+    .LHeadingCardText{
+        position: relative;
+        top: 30%;
+        font-size: 50px;
+      }
+      
+      .LHeadingCard:hover +.LHeadingCardText {
+        background-position: right center;
+        color: transparent;
+        text-decoration: none;
+      }
+    
+    .LContentCard{
+        box-shadow: 0 0 20px #00000033;
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    .CardSection{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    
+    .LHeadingCard{
+        width: 300px;
+        height: 200px;
+        mix-blend-mode: multiply;
+    }
+    .LHeadingCardText{
+        position: relative;
+        top: 30%;
+        font-size: 50px;
+      }
+    .LContentCard{
+        position: relative;
+        box-shadow: 0 0 20px #00000033;
+        width: 300px;
+        z-index: 2;
+        background-color: transparent;
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 424px) {
+    .CardSection{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    
+    .LHeadingCard{
+        width: 250px;
+        height: 150px;
+        mix-blend-mode: multiply;
+    }
+    .LHeadingCardText{
+        position: relative;
+        top: 30%;
+        font-size: 40px;
+      }
+    .LContentCard{
+        position: relative;
+        box-shadow: 0 0 20px #00000033;
+        width: 250px;
+        z-index: 2;
+        background-color: transparent;
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .CardSection{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    
+    .LHeadingCard{
+        width: 200px;
+        height: 100px;
+        mix-blend-mode: multiply;
+    }
+    .LHeadingCardText{
+        position: relative;
+        top: 30%;
+        font-size: 30px;
+      }
+    .LContentCard{
+        position: relative;
+        box-shadow: 0 0 20px #00000033;
+        width: 200px;
+        z-index: 2;
+        background-color: transparent;
+        font-size: 15px;
+        padding: 10px;
+    }
+}

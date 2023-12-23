@@ -98,10 +98,12 @@ const VKNavbar = () => {
               </Link>
             </NavItem>
             <NavItem className="navItems">
-
-
-          
               <Link style={{ textDecoration: "none" }} to="/education">
+                <span className="navSubHeading">EducationT</span>
+              </Link>
+            </NavItem>
+            <NavItem className="navItems">
+              <Link style={{ textDecoration: "none" }} to="/learned">
                 <span className="navSubHeading">Education</span>
               </Link>
             </NavItem>
