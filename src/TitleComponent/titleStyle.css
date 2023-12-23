@@ -1,0 +1,155 @@
+
+/* @media screen and(min-width:1024px)
+{
+    
+}
+
+@media screen and(min-width:767px) and (max-width:1023px)
+{
+    
+}
+@media screen and(max-width:767px)
+{
+    
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Happy+Monkey&family=Kaushan+Script&family=Nova+Square&family=Open+Sans:ital,wght@0,400;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Dangrek&family=Happy+Monkey&family=Kaushan+Script&family=Nova+Square&family=Open+Sans:ital,wght@0,400;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+.titlePage {
+  position: relative;
+  left: 10%;
+  margin-top: 80px;
+}
+
+.hiText {
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+}
+
+.TitleText {
+  font-family: Dangrek;
+  font-size: 120px;
+  background: linear-gradient(to right, #6A82FB 0%, #FC5C7D 51%, #6A82FB 100%);
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  row-gap: 0;
+  transition: 0.5s;
+}
+
+.TitleText:hover {
+  background-position: right center;
+  color: transparent;
+  text-decoration: none;
+}
+
+.subTitle {
+  font-family: Electrolize, sans-serif !important;
+  font-size: 25px !important;
+  background: linear-gradient(to right, #00d2ff, #928dab);
+  background-clip: text;
+  color: transparent;
+}
+
+.introText {
+  margin-top: 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  width: 800px;
+  text-align: justify;
+}
+
+/* Media Queries */
+/* @media screen and (mix-width: 1024px) {
+  .titlePage {
+    position: relative;
+  }
+
+  .hiText {
+    font-size: 20px;
+  }
+
+  .TitleText {
+    font-size: 80px !important;
+  }
+
+  .subTitle {
+    font-size: 10px !important;
+  }
+
+  .introText {
+    font-size: 10px;
+  }
+} */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hiText {
+    font-size: 15px;
+  }
+
+  .TitleText {
+    font-size: 90px !important;
+  }
+
+  .subTitle {
+    font-size: 20px !important;
+  }
+
+  .introText {
+    font-size: 15px;
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .titlePage {
+    position: relative;
+  }
+
+  .hiText {
+    font-size: 20px;
+  }
+
+  .TitleText {
+    font-size: 60px;
+  }
+
+  .subTitle {
+    font-size: 15px !important;
+  }
+
+  .introText {
+    font-size: 15px;
+    width: 400px;
+    text-align: none !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .titlePage {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .hiText {
+    font-size: 15px;
+  }
+
+  .TitleText {
+    font-size: 60px;
+  }
+
+  .subTitle {
+    font-size: 15px !important;
+  }
+
+  .introText {
+    font-size: 15px;
+    width: 200px;
+    text-align: none !important;
+  }
+}

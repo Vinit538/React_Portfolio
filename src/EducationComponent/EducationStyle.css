@@ -1,0 +1,201 @@
+.educationPage{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.eduactionDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.testBox{
+    border: 1px solid white;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.educationHeading{
+    width: 400px;
+    height: 150px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
+    border: 1px solid white;
+    /* background-color: #15315f; */
+    background-color: transparent;
+    z-index: 2;
+    transform: translate(40%,5%);
+    transition: transform 0.8s ease; 
+}
+.educationCard{
+    width: 300px;
+    border: 1px solid wheat;
+    background-color: #15315f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-120%, 5%);
+    transition: transform 0.3s ease; 
+}
+
+.educationHeading:hover + .educationCard {
+    width: 400px;
+
+    transform: translate(-50%, 5%);
+}
+
+.educationHeading:hover{
+    transform: translate(-5%,5%);
+    transition: transform 0.5s ease-out; 
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px)  {
+
+    .educationHeading{
+        width: 350px;
+        height: 150px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        position: relative;
+        border: 1px solid white;
+        /* background-color: #15315f; */
+        background-color: transparent;
+        transform: translate(40%,5%);
+        transition: transform 0.8s ease; 
+    }
+    .educationCard{
+        width: 200px;
+        transform: translate(-150%, 5%);
+        transition: transform 0.5s ease; 
+    }
+    
+    .educationHeading:hover + .educationCard {
+        width: 400px;
+    
+        transform: translate(-30%, 5%);
+    }
+    
+    .educationHeading:hover{
+        transform: translate(5%,5%);
+        transition: transform 0.5s ease-out; 
+    }
+
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+
+    .educationPage {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .educationHeading {
+        visibility: hidden;
+        /* width: 400px;
+        height: 300px;
+        position: relative;
+        border: 1px solid white;
+        background-color: #15315f;
+        transform: translate(10%, 5%);
+        filter: grayscale(100%) contrast(1) brightness(80%);
+        mix-blend-mode: multiply; */
+    }
+
+    .educationCard {
+        width: 300px;
+        height: 250px;
+       
+        transform: translate(-100%, 5%);
+        z-index: 2;
+        background-color: transparent;
+    }
+
+    /* .eduactionDiv:hover .educationHeading {
+        transform: translate(10%, 5%) !important; 
+        transition: none !important; 
+    }
+
+    .eduactionDiv:hover .educationHeading + .educationCard {
+        transform: translate(-100%, 5%) !important;
+        transition: none !important; 
+    } */
+}
+@media screen and (min-width: 321px) and (max-width: 424px) {
+
+   
+
+    .educationHeading {
+        visibility: hidden;
+    }
+
+    .educationCard {
+        width: 300px;
+        height: 250px;
+       
+        transform: translate(-100%, 5%);
+        z-index: 2;
+        background-color: transparent;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+
+   
+    
+    .educationHeading{
+       visibility: hidden;
+    }
+    .educationCard{
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translate(-100%, 5%);
+        z-index: 2;
+        background-color: transparent;
+
+    }
+   
+    .educationCard:hover{
+        box-shadow: 0 0 20px aqua;
+    }    
+   
+
+
+}
+
+
+
+/* .educationHeading2{
+    width: 400px;
+    height: 150px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
+    border: 1px solid white;
+    background-color: #15315f;
+    z-index: 2;
+    transform: translate(-45%,5%);
+    transition: transform 0.5s ease; 
+}
+.educationCard2{
+    width: 390px;
+    border: 1px solid wheat;
+    background-color: #15315f;
+   
+    transform: translate(100%, 5%);
+    transition: transform 0.3s ease; 
+}
+
+
+.educationHeading2:hover + .educationCard2 {
+    transform: translate(-100px, 5%) !important;
+}
+
+.educationHeading2:hover {
+    transform: translate(-5%, 5%);
+    transition: transform 0.5s ease-out;
+} */

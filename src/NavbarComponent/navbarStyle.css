@@ -1,0 +1,132 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Teko:wght@300&display=swap');
+
+  /* font-family: 'Space Mono', monospace;
+  font-family: 'Teko', sans-serif; */
+.vkNavbar{
+    width: auto;
+    /* background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%);   */
+    background-image: linear-gradient(to right, #2980b9 0%, #2c3e50  51%, #2980b9  100%);
+    margin: 10px !important;
+    padding: 10px !important;
+    padding-bottom: 10px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white !important;            
+    /* box-shadow: 0 0 20px #eee; */
+    border-radius: 10px !important;
+    display: flex;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.vkNavbar:hover{
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+}
+.navbarBrand{
+    text-decoration: none !important;
+    list-style: none !important;
+}
+
+.navHeadLogo{
+    width: 80px;
+    text-decoration: none !important;
+    /* margin: -10px !important;
+    padding: -10px !important; */
+
+}
+.navToggler{
+    width: 80px;
+}
+
+.navMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none !important;
+}
+.navItems{
+    text-decoration: none !important;
+    width: auto;
+    padding: 10px;
+    position: relative;
+}
+.navItems::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-image: linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%); 
+    transition: all ease 0.5s;
+}
+.navItems:hover::after{ 
+    width: 100%;
+    box-shadow: 0 0 20px aqua;
+    
+  }
+
+
+
+.navbarToggler{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navSubHeading{
+    font-family: 'Space Mono', monospace;
+    background-image: linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%); 
+    background-clip: text;
+    color: transparent;
+
+}
+.navSubHeading:hover{
+    text-shadow: 0 0 20px aqua;
+}
+
+
+
+
+
+
+/* left sidebar */
+.mediaLinks{
+    position: fixed;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap:20px;
+    padding: 20px;
+    background-image: linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%); 
+    background-clip: text;
+    color: transparent;
+}
+
+/*right Sidebar */
+.mailLink{
+    transform: rotate(90deg) !important;
+    transform-origin: right top; 
+    position: fixed;
+    right: 0; 
+    top: 80%; 
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    background-image: linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%); 
+    background-clip: text;
+    color: transparent;
+    padding: 20px;
+}
+.mailLink:hover{
+    transform: scaleX(25);
+}

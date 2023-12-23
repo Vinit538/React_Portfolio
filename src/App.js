@@ -1,24 +1,56 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
+import { Row, Col } from 'reactstrap';
+import VKNavbar from './NavbarComponent/VTNavbar';
+import TitlePage from './TitleComponent/TitlePage';
+import About_Me from './About_MeComponent/About_Me';
+import Projects from './ProjectsComponent/Projects';
+import Education from './EducationComponent/Education';
+import LeftNavbar from './NavbarComponent/LeftNavbar';
+import RightNavbar from './NavbarComponent/RightNavbar';
 import './App.css';
+import Home from './Home';
 
 function App() {
+  const isMobile = useMediaQuery({ maxWidth: 1050 });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="appBody">
+        <VKNavbar />
+        <Row>
+          {!isMobile && (
+            <>
+              <Col md={1}>
+                <LeftNavbar />
+              </Col>
+              <Col>
+                <Routes>
+                  <Route path="/" element={<TitlePage />} />
+                  <Route path="/about_me" element={<About_Me />} />
+                  <Route path="/project" element={<Projects />} />
+                  <Route path="/education" element={<Education />} />
+                </Routes>
+              </Col>
+              <Col md={1}>
+                <RightNavbar />
+              </Col>
+            </>
+          )}
+          {isMobile && (
+            <Col>
+              <Routes>
+                <Route path="/" element={<TitlePage />} />
+                <Route path="/about_me" element={<About_Me />} />
+                <Route path="/project" element={<Projects />} />
+                <Route path="/education" element={<Education />} />
+              </Routes>
+            </Col>
+          )}
+        </Row>
+      </div>
+    </Router>
   );
 }
 

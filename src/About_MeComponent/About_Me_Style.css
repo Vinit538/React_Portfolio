@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton&display=swap');
+
+
+.aboutPageHeading
+{
+    font-family: 'Space Mono', monospace;
+    position: relative;
+    color: #CCCCFF;
+    font-size: 25px;
+    margin-left: 80px !important;
+    margin-top: 100px !important;
+}
+.aboutPageHeading::after
+{
+    content: '';
+    position: absolute;
+    top:50%;
+    left: 150px;
+    right: auto;
+    width: 500px;
+    height: 0.5px !important;
+    background-color: #233554;
+}
+.about_Me_page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    gap: 10px;
+}
+.about_my_self{
+    color: #008B8B;
+    padding: 20px;
+    width: 500px;
+    box-shadow: 0 0 20px #00000033;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 18px;
+}
+.ilightText{
+  color: aqua;  
+}
+
+.about_me_img {
+    width: fit-content;
+    position: relative;
+}
+
+.about_me_img img {
+    width: 300px;
+    padding: 15px;
+    filter: grayscale(80%);
+}
+.about_info{
+    box-shadow: 0 0 20px #00000033;
+    padding: 20px;
+    margin-top: -80px;
+}
+.self_heading{
+width: fit-content;
+  margin-top: 20px;  
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 25px;
+  color: cornflowerblue;
+}
+.selfName{
+    font-family: 'Neuton', serif;
+}
+
+
+.about_me_img:hover img {
+    filter: none;
+}
+
+.about_me_img::before {
+    content: '';
+    padding: 10px;
+    position: absolute;
+    top: 20px !important;
+    left: 20px !important;
+    right: 0;
+    bottom: 0;
+    border: 2px solid aqua;
+    box-sizing: border-box;
+    transform: translate(5px, 5px);
+    transition: transform 0.3s ease-out;
+    z-index: -1;
+}
+
+.about_me_img:hover::before {
+    transform: translate(-10px, -10px);
+    box-shadow: 0 0 20px aqua;
+}
+
+
+.about_my_self .paragraphText{
+    display: block;
+    opacity: 0;
+    animation: reveal 0.5s forwards var(--d);
+}
+
+.about_my_self .animated-paragraph {
+    animation: slideIn 0.5s forwards var(--d);
+}
+
+
+@keyframes reveal {
+    from {
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+li{
+    color: aqua;
+}
+  
+.listHeading{
+   /* color: #6495ED;  */
+   color: #29AB87;
+   font-size: 21px;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .about_my_self{
+        padding: 20px;
+        width: 350px;
+    }
+    
+    
+    .about_me_img {
+        width: fit-content;
+        position: relative;
+    }
+    
+    .about_me_img img {
+        width: 250px;
+        height: 300px;
+        padding: 15px;
+        filter: grayscale(80%);
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .aboutPageHeading
+    {
+        position: relative;
+        font-size: 25px;
+        margin-left: 25px !important;
+        margin-top: 100px !important;
+    }
+    .aboutPageHeading::after
+    {
+        content: '';
+        position: absolute;
+        top:50%;
+        left: 150px;
+        right: auto;
+        width: 300px;
+    }
+    .about_Me_page {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;    
+    }
+    .about_my_self{
+        padding: 20px;
+        width: 400px;
+    }
+    
+    .about_me_img img {
+        width: 300px;
+        padding: 15px;
+        filter: grayscale(80%);
+    }
+    .about_info{
+        margin-top: 20px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .aboutPageHeading
+{
+    position: relative;
+    font-size: 15px;
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 100px !important;
+}
+.aboutPageHeading::after
+{
+    content: '';
+    position: absolute;
+    top:50%;
+    left: auto;
+    right: auto;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+    .about_Me_page {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;    
+    }
+
+    .about_my_self{
+        padding: 20px;
+        width: 280px;
+        font-size: 15px;
+    }
+    
+    .about_me_img img {
+        width: 250px;
+        padding: 15px;
+        filter: grayscale(80%);
+    }
+    .about_info{
+        margin-top: 40px;
+        padding: 5px;
+    }
+}
