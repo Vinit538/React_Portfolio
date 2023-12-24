@@ -7,18 +7,18 @@
 
 
 .ProjectsPage{
-  width: auto;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  justify-items: center !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 .pageHeading
 {
-    font-family: 'Space Mono', monospace;
+  font-family: 'Dangrek', monospace;
     position: relative;
-    color: #CCCCFF;
-    font-size: 25px;
+    color: cornflowerblue;
+    font-size: 40px !important;
     margin-left: 80px !important;
     margin-top: 10px !important;
 }
@@ -31,7 +31,13 @@
     right: auto;
     width: 500px;
     height: 0.5px !important;
-    background-color: #233554;
+    background-color: cornflowerblue;
+}
+.projectContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
   .projectImage{
@@ -39,12 +45,13 @@
     height: 400px;
     border-radius: 10px !important;
     padding: 10px;
-    filter: grayscale(80);
+    filter: grayscale(100%) contrast(1) brightness(80%);
   }
   
   .projectImage:hover{
     filter: none;
-    border: 2px solid aqua;
+    border: 1px solid aqua;
+    box-shadow: 0px 0px 20px cornflowerblue;
   }
 
   .projectType{
@@ -55,13 +62,14 @@
 
   .projectTitle{
     font-family: 'Squada One', sans-serif;
-    font-size: 40px;
+    font-size: 35px;
     color: cornflowerblue;
-    margin-bottom: -10px;
+    /* margin-bottom: -10px; */
   }
 
   .projectTitle:hover{
     color: aqua;
+    text-shadow: 0px 0px 20px cornflowerblue;
   }
 
 
@@ -70,18 +78,13 @@
   .Project{
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding: 50px;
-    justify-items: center;
-  }
-
-  .projectContainer {
-    width: auto !important;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 40px;
+    padding: 50px;
   }
+
+ 
   
   .ProjectOne {
     position: relative;
@@ -109,7 +112,6 @@
     top: 50%;
     left: 50%;
     transform: translate(0%, 5%);
-
   }
   .projectSkills{
     margin-top: 10px;
@@ -144,12 +146,13 @@
     height: 400px;
     border-radius: 10px !important;
     padding: 10px;
-    filter: grayscale(80);
+    filter: grayscale(100%) contrast(1) brightness(80%);
   }
   
   .projectImage2:hover{
     filter: none;
-    border: 2px solid aqua;
+    border: 1px solid aqua;
+    box-shadow: 0px 0px 20px cornflowerblue;
   }
 
   .projectInfo2 {
@@ -164,40 +167,44 @@
   
   .projectCard2 {
     width: 400px;
-    height: 100px;
+    padding:20px 20px 20px 5px;
+    text-align: right;
     background-color: #15315f;
+    color: #008B8B;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 18px;
+    text-align: left;
     z-index: 2;
     top: 50%;
     right: 80%;
     transform: translate(0%, 5%);
   }
 
-
-@media screen and(min-width:1024px)
-{
- 
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .ProjectsPage{
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .pageHeading
   {
       position: relative;
       color: #CCCCFF;
-      font-size: 20px !important;
+      font-size: 30px !important;
+      margin-left: 40px !important;
   }
   .pageHeading::after
   {
-    left:280px;
+    left:300px;
     width: 350px !important;
   }
 
   .projectImage{
-    width: 450px;
+    width: 440px;
     height: 300px;
   }
   .projectImage2{
-    width: 450px;
+    width: 440px;
     height: 300px;
     transform: translate(-10%, 0%);
 
@@ -232,60 +239,129 @@
     width: 300px;
     transform: translate(0%, 5%);
   }
-
-
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {  
+    .ProjectsPage{
+      margin-top: 120px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pageHeading
+    {
+        position: relative;
+        color: #CCCCFF;
+        font-size: 30px !important;
+        margin-left: 40px !important;
+    }
+    .pageHeading::after
+    {
+      left:300px;
+      width: 350px !important;
+    }
   
-  
-  .pageHeading
-  {
+    .projectImage{
+      width: 350px;
+      height: 400px;
+      transform: translate(42%, 0%);
+      mix-blend-mode: multiply;
+    }
+    .projectImage2{
       position: relative;
-      color: #CCCCFF;
-      font-size: 15px !important;
-      margin-left: 10px !important;
-  }
-  .pageHeading::after
-  {
-    left:220px;
-    width: 150px !important;
-  }
+      width: 350px;
+      height: 400px;
+      transform: translate(-42%, 0%);
+      mix-blend-mode: multiply;
+    }
 
-  .projectContainer{
+    .projectImage,.projectImage2:hover{
+      box-shadow: 0px 0px 20px cornflowerblue;
+    }
+    
+  
+    .projectInfo {
+      transform: translate(-60%, 0%);
+    }
+    
+    .projectCard {
+      width: auto;
+      padding: 15px;
+      font-size: 15px;
+      z-index: 2;
+      background-color: transparent;
+      transform: translate(0%, 5%);
+  
+    }
+    .projectSkills{
+      font-size: 13px;
+    }
+    
+  
+   
+  
+    .projectInfo2 {
+      width: 300px;
+      z-index: 1;      
+      transform: translate(60%, 0%);
+
+      
+    }
+    
+    .projectCard2 {
+      width: 300px;
+      transform: translate(0%, 5%);
+      background-color: transparent;
+    }  
+}
+@media screen and (min-width: 321px) and (max-width: 424px) {  
+  .ProjectsPage{
+    margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
   }
+  .pageHeading
+  {
+      position: relative;
+      color: cornflowerblue;
+      font-size: 20px !important;
+      margin-left: 20px !important;
+  }
+  .pageHeading::after
+  {
+    content: none;
+  }
 
   .projectImage{
-    width: 400px;
-    height: 350px;
-    filter: grayscale(100%) contrast(1) brightness(80%);
+    width: 280px;
+    height: 400px;
+    transform: translate(50%, 0%);
     mix-blend-mode: multiply;
   }
-  
   .projectImage2{
-    width: 400px;
-    height: 350px;
-    filter: grayscale(100%) contrast(1) brightness(80%);
+    position: relative;
+    width: 280px;
+    height: 400px;
+    transform: translate(-50%, 0%);
     mix-blend-mode: multiply;
-    transform: translate(-75%, 0%);
+  }
+
+  .projectImage,.projectImage2:hover{
+    box-shadow: 0px 0px 20px cornflowerblue;
   }
   
 
   .projectInfo {
-    width: 400px !important;
-    transform: translate(-105%, 0%);
-    background: transparent;
+    width: 250;
+    padding: 5px;
+    transform: translate(-58%, 0%);
   }
- 
   
   .projectCard {
-    width: 360px !important;
-    padding: 0px;
+    width: 250px;
+    padding: 5px;
     font-size: 15px;
     z-index: 2;
-    transform: translate(0%, 5%);
     background-color: transparent;
+    transform: translate(0%, 5%);
 
   }
   .projectSkills{
@@ -296,98 +372,102 @@
  
 
   .projectInfo2 {
-    transform: translate(10%, 0%);
-    z-index: 1;
+    width: 250px;
+    padding: 5px;
+    z-index: 1;      
+    transform: translate(54%, 0%);
   }
   
   .projectCard2 {
-    width: 360px;
-    padding: 0px;
-    font-size: 15px;
-    z-index: 2;
-    transform: translate(0%, 0%);
+    margin-top: -20px;
+    width: 250px;
+    transform: translate(0%, 5%);
     background-color: transparent;
-  }
+  }  
 }
+
+
+
+
+
+
 
 @media screen and (max-width: 320px) {
   .Project{
    padding: 5px;
   }
   
-  .pageHeading
-  {
-      position: relative;
-      color: #CCCCFF;
-      font-size: 15px !important;
-      margin-left: 10px !important;
-  }
-  .pageHeading::after
-  {
-    left:200px;
-    width: 80px !important;
-  }
-
-  .projectContainer{
+  .ProjectsPage{
+    margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
   }
+  .pageHeading
+  {
+      position: relative;
+      color: cornflowerblue;
+      font-size: 20px !important;
+      margin-left: 20px !important;
+  }
+  .pageHeading::after
+  {
+    content: none;
+  }
 
   .projectImage{
-    width: 300px;
+    width: 250px;
     height: 400px;
-    filter: grayscale(100%) contrast(1) brightness(80%);
+    transform: translate(50%, 0%);
     mix-blend-mode: multiply;
   }
-  
   .projectImage2{
-    width: 300px;
+    position: relative;
+    width: 250px;
     height: 400px;
-    filter: grayscale(100%) contrast(1) brightness(80%);
+    transform: translate(-50%, 0%);
     mix-blend-mode: multiply;
-    transform: translate(-100%, 0%);
+  }
+
+  .projectImage,.projectImage2:hover{
+    box-shadow: 0px 0px 20px cornflowerblue;
   }
   
 
   .projectInfo {
-    transform: translate(-110%, 0%);
-    background: transparent;
+    width: 250px;
+    padding: 5px;
+    transform: translate(-55%, 0%);
   }
- 
   
   .projectCard {
-    width: 250px;
+    width: 230px;
     padding: 0px;
-    font-size: 15px;
+    font-size: 14px;
     z-index: 2;
-    transform: translate(0%, 0%);
     background-color: transparent;
+    transform: translate(0%, 5%);
+
   }
   .projectSkills{
     font-size: 12px;
   }
   
+
+ 
+
   .projectInfo2 {
-    transform: translate(10%, 0%);
-    z-index: 1;
+    width: 250px;
+    padding: 5px;
+    z-index: 1;      
+    transform: translate(54%, 0%);
   }
   
   .projectCard2 {
+    margin-top: -20px;
     width: 250px;
-    padding: 0px;
-    font-size: 15px;
-    z-index: 2;
+    transform: translate(0%, 5%);
     background-color: transparent;
-  }
-}
-@media screen and (min-width: 321px) and (max-width: 425px){
-  .Project{
-    padding: 5px;
-    margin-left: 10px; 
-  }
-   
-
-
+  }  
 }
 
 
