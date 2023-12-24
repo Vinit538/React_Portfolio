@@ -4,6 +4,7 @@ import './About_Me_Style.css';
 const About_Me = () => {
   return (
     <div className="about_Me" id="about_me">
+    <div >
       <div><span className="aboutPageHeading">
         About Me
         </span>
@@ -80,6 +81,7 @@ const About_Me = () => {
           </>
         </p>
       </div>
+    </div>
     </div>
     </div>
   );

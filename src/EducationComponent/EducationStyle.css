@@ -1,6 +1,8 @@
 .educationPage{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-top: 100px !important;
     gap:20px;
 }
 

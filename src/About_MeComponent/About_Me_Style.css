@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Neuton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Dangrek&family=Happy+Monkey&family=Kaushan+Script&family=Nova+Square&family=Open+Sans:ital,wght@0,400;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Akaya+Kanadaka&family=Engagement&display=swap');
 
+.about_Me{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px !important;
+  gap: 10px;
+  margin-top: 100px;
 
+}
 .aboutPageHeading
 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Dangrek', monospace;
     position: relative;
     color: #CCCCFF;
     font-size: 25px;
@@ -21,20 +32,20 @@
     right: auto;
     width: 500px;
     height: 0.5px !important;
-    background-color: #233554;
+    background-color: cornflowerblue;
 }
 .about_Me_page{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 20px;
     gap: 10px;
 }
 .about_my_self{
     color: #008B8B;
     padding: 20px;
-    width: 500px;
+    width: 480px;
     box-shadow: 0 0 20px #00000033;
     font-family: 'Share Tech', sans-serif;
     font-size: 18px;
@@ -69,7 +80,7 @@ width: fit-content;
   color: cornflowerblue;
 }
 .selfName{
-    font-family: 'Neuton', serif;
+    text-shadow: 0 0 20px aqua;
 }
 
 
@@ -141,10 +152,24 @@ li{
 
 
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .about_Me{
+        margin-top: 100px;
+    }
+
+    .about_Me_page{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+
     .about_my_self{
         padding: 20px;
-        width: 350px;
+        width: auto;
     }
     
     
@@ -161,13 +186,19 @@ li{
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width:767px) {
+    
+    .about_Me{
+        margin-top: 100px;
+    }
+
 
     .aboutPageHeading
     {
         position: relative;
         font-size: 25px;
-        margin-left: 25px !important;
+        text-align: center;
+        /* margin-left: 25px !important; */
         margin-top: 100px !important;
     }
     .aboutPageHeading::after
@@ -175,9 +206,10 @@ li{
         content: '';
         position: absolute;
         top:50%;
-        left: 150px;
+        left: 110px;
         right: auto;
-        width: 300px;
+        height: 0.5px;
+        width: clamp(250px, 75%, 350px);
     }
     .about_Me_page {
         display: flex;
@@ -186,7 +218,7 @@ li{
     }
     .about_my_self{
         padding: 20px;
-        width: 400px;
+        width: auto;
     }
     
     .about_me_img img {
@@ -199,12 +231,62 @@ li{
         padding: 10px;
     }
 }
+@media screen and (min-width: 321px) and (max-width:424px) {
 
+    .about_Me{
+        margin-top: 90px;
+    }
+    
+    
+    .aboutPageHeading
+    {
+        font-size: 20px;
+        margin-left: 20px !important;
+        margin-right: auto;
+        margin-top: 100px !important;
+    }
+    .aboutPageHeading::after
+    {
+        top:50%;
+        left: auto;
+        right: auto;
+        width: 200px;
+        margin-left: 10px;
+        margin-right: auto;
+    }
+    
+        .about_Me_page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;    
+        }
+    
+        .about_my_self{
+            padding: 10px;
+            width: auto;
+            font-size: 15px;
+        }
+        
+        .about_me_img img {
+            width: 280px;
+            padding: 10px;
+            filter: grayscale(80%);
+        }
+        .about_info{
+            margin-top: 40px;
+            padding: 5px;
+        }
+    }
 @media screen and (max-width: 320px) {
 
-    .aboutPageHeading
+.about_Me{
+    margin-top: 90px;
+}
+
+
+.aboutPageHeading
 {
-    position: relative;
     font-size: 15px;
     margin-left: 100px;
     margin-right: auto;
@@ -212,8 +294,6 @@ li{
 }
 .aboutPageHeading::after
 {
-    content: '';
-    position: absolute;
     top:50%;
     left: auto;
     right: auto;
@@ -225,12 +305,13 @@ li{
     .about_Me_page {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         padding: 20px;    
     }
 
     .about_my_self{
-        padding: 20px;
-        width: 280px;
+        padding: 10px;
+        width: auto;
         font-size: 15px;
     }
     

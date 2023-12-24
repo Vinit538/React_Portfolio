@@ -52,7 +52,9 @@ function App() {
             </Col>
           )}
         </Row>
+        <RightNavbar />
         <LeftNavbar />
+
       </div>
     </Router>
   );

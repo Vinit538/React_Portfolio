@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { 
-  Collapse, 
-  Navbar, 
-  NavbarBrand, 
+import {
+  Collapse,
+  Navbar,
+  NavbarBrand,
   NavbarToggler,
   Nav,
-  NavItem, 
+  NavItem,
 } from "reactstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./navbarStyle.css";
 const VKNavbar = () => {
   //const navigate = useNavigate();
-  const [isOpen,setIsOpen]=useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar=()=> setIsOpen(!isOpen);
+  const toggleNavbar = () => setIsOpen(!isOpen);
 
   const handleScroll = () => {
     const navbar = document.getElementById("vkNavbar");
@@ -34,8 +34,7 @@ const VKNavbar = () => {
       ) {
         // Scrolling down or at the bottom of the page, hide the navbar
         navbar.style.top = "-100px";
-        navbar.backgroundColor='transparent';
-        
+        navbar.backgroundColor = "transparent";
       }
     }
   };
@@ -65,24 +64,22 @@ const VKNavbar = () => {
     };
   }, []);
 
-
-
-
   return (
     <div>
       <Navbar fixed="top" expand="md" className="vkNavbar" id="vkNavbar">
         <NavbarBrand className="navbarBrand">
           <NavItem className="navItemsHead">
-              <Link  to="/">
-                <span className="navHead">            
-                  <img src="../logos/vlogo20.png" className="navHeadLogo"/>
-                  </span>
-              </Link>
-            </NavItem>
+            <Link to="/" style={{textDecoration:'none'}}>
+              <span className="navHead">
+                <span className="NavHeadingText">Vinit K</span>
+                {/* <img src="../logos/vlogo20.png" className="navHeadLogo" /> */}
+              </span>
+            </Link>
+          </NavItem>
         </NavbarBrand>
         <NavbarToggler className="navbarToggler" onClick={toggleNavbar}>
           <span>
-            <img src="../logos/vlogo13.png" className="navToggler"/>
+            <img src="../logos/vlogo20.png" className="navToggler" />
           </span>
         </NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
@@ -92,16 +89,15 @@ const VKNavbar = () => {
             navbar
           >
             <NavItem className="navItems">
-          
               <Link style={{ textDecoration: "none" }} to="/about_me">
                 <span className="navSubHeading">About Me</span>
               </Link>
             </NavItem>
-            <NavItem className="navItems">
+            {/* <NavItem className="navItems">
               <Link style={{ textDecoration: "none" }} to="/education">
                 <span className="navSubHeading">EducationT</span>
               </Link>
-            </NavItem>
+            </NavItem> */}
             <NavItem className="navItems">
               <Link style={{ textDecoration: "none" }} to="/learned">
                 <span className="navSubHeading">Education</span>
@@ -113,7 +109,7 @@ const VKNavbar = () => {
               </Link>
             </NavItem>
             <NavItem className="navItems">
-              <Link style={{ textDecoration: "none" }} >
+              <Link style={{ textDecoration: "none" }}>
                 <span className="navSubHeading">Contact</span>
               </Link>
             </NavItem>

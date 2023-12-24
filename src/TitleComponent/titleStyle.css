@@ -1,17 +1,4 @@
 
-/* @media screen and(min-width:1024px)
-{
-    
-}
-
-@media screen and(min-width:767px) and (max-width:1023px)
-{
-    
-}
-@media screen and(max-width:767px)
-{
-    
-} */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Happy+Monkey&family=Kaushan+Script&family=Nova+Square&family=Open+Sans:ital,wght@0,400;1,800&display=swap');
@@ -20,14 +7,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
 .titlePage {
-  position: relative;
-  left: 10%;
-  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 40px;
+  margin-left: 60px !important;
 }
 
 .hiText {
   font-family: 'Space Mono', monospace;
   font-size: 20px;
+  margin-bottom: -20px;
 }
 
 .TitleText {
@@ -60,11 +51,10 @@
   font-family: 'Space Mono', monospace;
   font-size: 20px;
   width: 800px;
-  text-align: justify;
 }
 
 /* Media Queries */
-/* @media screen and (mix-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width:1024px){
   .titlePage {
     position: relative;
   }
@@ -74,25 +64,32 @@
   }
 
   .TitleText {
-    font-size: 80px !important;
+    font-size: 100px;
   }
 
   .subTitle {
-    font-size: 10px !important;
+    font-size: 25px !important;
   }
 
   .introText {
-    font-size: 10px;
+    font-size: 20px;
+    width: auto;
   }
-} */
+}
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 425px) and (max-width:767px){
+  .titlePage {
+    margin-left: 20px !important;
+    margin-right: 10px !important;
+    padding: 10px !important;
+  }
+
   .hiText {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .TitleText {
-    font-size: 90px !important;
+    font-size: 80px;
   }
 
   .subTitle {
@@ -100,22 +97,27 @@
   }
 
   .introText {
-    font-size: 15px;
-    width: 600px;
+    font-size: 20px;
+    width: auto;
   }
 }
 
-@media screen and (max-width: 767px) {
+
+
+
+@media screen and (min-width: 320px) and (max-width:424px){
   .titlePage {
     position: relative;
+    margin-left: -10px !important;
   }
 
   .hiText {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .TitleText {
     font-size: 60px;
+    padding: -10px !important;
   }
 
   .subTitle {
@@ -124,15 +126,15 @@
 
   .introText {
     font-size: 15px;
-    width: 400px;
-    text-align: none !important;
+    width: auto;
   }
 }
 
 @media screen and (max-width: 320px) {
   .titlePage {
     position: relative;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-left: -10px !important;
   }
 
   .hiText {
@@ -140,7 +142,8 @@
   }
 
   .TitleText {
-    font-size: 60px;
+    font-size: 50px;
+    padding: -10px !important;
   }
 
   .subTitle {
@@ -149,7 +152,6 @@
 
   .introText {
     font-size: 15px;
-    width: 200px;
-    text-align: none !important;
+    width: auto;
   }
 }

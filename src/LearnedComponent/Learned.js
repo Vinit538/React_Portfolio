@@ -11,7 +11,7 @@ const Learned = () => {
   return (
     <div className="LearnedPage">
       <div>
-        <p className="pageHeading">Some Things I’ve Learnt</p>
+        <p className="LpageHeading">Some Things I’ve Learnt</p>
       </div>
       <div className="ThingsLearned">
         <div className="CardSection">

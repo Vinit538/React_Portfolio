@@ -11,10 +11,11 @@ const TitlePage = () => {
         <div className='subTitle'>
         <TypeAnimation 
             sequence={[
-                // Same substring at the start will only be typed once, initially
                 'I am Full Stack Developer',
                 5000,
-                'I am Java Full Stack Developer',
+                'I am Front-end Developer',
+                1000,
+                'I am Back-end Developer',
                 1000,
                 'I am Java Developer',
                 1000,
@@ -22,7 +23,6 @@ const TitlePage = () => {
                 1000,
             ]}
             speed={5}
-            // style={{ fontSize: '15px' }}
             repeat={Infinity}
             />
         </div>

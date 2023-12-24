@@ -1,7 +1,37 @@
   @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Dangrek&family=Happy+Monkey&family=Kaushan+Script&family=Nova+Square&family=Open+Sans:ital,wght@0,400;1,800&display=swap');
 
 
- 
+
+
+
+ .LearnedPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 20px;
+ }
+
+ .LpageHeading
+{
+    font-family: 'Dangrek', monospace;
+    position: relative;
+    color: cornflowerblue;
+    font-size: 30px;
+    margin-left: 40px !important;
+}
+.LpageHeading::after
+{
+    content: '';
+    position: absolute;
+    top:50%;
+    left:320px;
+    right: auto;
+    width: 500px;
+    height: 0.5px !important;
+    background-color: cornflowerblue;
+}
 
   .ThingsLearned{
     display: flex;
@@ -40,10 +70,10 @@
     transition: 0.9s;
   }
   
-  .LHeadingCard:hover +.LHeadingCardText {
-    background-position: right center;
-    color: transparent;
-    text-decoration: none;
+  .LHeadingCard:hover +.LContentCard {
+    color: white;
+    transform: translate(0%,-5%);
+    box-shadow: 0px 0px 10px azure;
   }
 
 .LContentCard{
@@ -57,6 +87,7 @@
     font-size: 20px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease-out;
 }
 
 .icon{
@@ -77,10 +108,10 @@
         font-size: 50px;
       }
       
-      .LHeadingCard:hover +.LHeadingCardText {
-        background-position: right center;
-        color: transparent;
-        text-decoration: none;
+      .LHeadingCard:hover +.LContentCard {
+        color: white;
+        box-shadow: 0px 0px 10px aquamarine;
+       
       }
     
     .LContentCard{
@@ -95,11 +126,37 @@
         flex-direction: column;
         gap: 0px;
     }
+
+    .LpageHeading
+    {
+        font-family: 'Dangrek', monospace;
+        position: relative;
+        color: cornflowerblue;
+        font-size: 20px;
+        margin-left: 20px !important;
+    }
+    .LpageHeading::after
+    {
+        content: '';
+        position: absolute;
+        top:50%;
+        left:220px;
+        right: auto;
+        width: 400px;
+        height: 0.5px !important;
+        background-color: cornflowerblue;
+    }
     
     .LHeadingCard{
         width: 300px;
         height: 200px;
         mix-blend-mode: multiply;
+    }
+    .LHeadingCard:hover {
+        mix-blend-mode: normal !important;
+    }
+    .LHeadingCard:hover + .LContentCard{
+        box-shadow: 0px 0px 10px cadetblue;
     }
     .LHeadingCardText{
         position: relative;
@@ -109,7 +166,7 @@
     .LContentCard{
         position: relative;
         box-shadow: 0 0 20px #00000033;
-        width: 300px;
+        width: auto;
         z-index: 2;
         background-color: transparent;
     }
@@ -122,6 +179,16 @@
         flex-direction: column;
         gap: 0px;
     }
+    .LpageHeading
+    {
+        font-size: 25px;
+        margin-left: 20px !important;
+        color: cornflowerblue;
+    }
+    .LpageHeading::after
+    {
+        content: none;
+    }
     
     .LHeadingCard{
         width: 250px;
@@ -132,11 +199,12 @@
         position: relative;
         top: 30%;
         font-size: 40px;
+        color: black;
       }
     .LContentCard{
         position: relative;
         box-shadow: 0 0 20px #00000033;
-        width: 250px;
+        width: auto;
         z-index: 2;
         background-color: transparent;
         font-size: 18px;
@@ -146,6 +214,18 @@
 
 
 @media screen and (max-width: 320px) {
+
+    .LpageHeading
+    {
+        font-size: 20px;
+        margin-left: 20px !important;
+        color: cornflowerblue;
+    }
+    .LpageHeading::after
+    {
+        content: none;
+    }
+    
     .CardSection{
         display: flex;
         flex-direction: column;
@@ -157,10 +237,16 @@
         height: 100px;
         mix-blend-mode: multiply;
     }
+    .LHeadingCard:hover + .LContentCard{
+        box-shadow:0px 0px 20px aqua;
+    }
     .LHeadingCardText{
         position: relative;
         top: 30%;
         font-size: 30px;
+        z-index: 2;
+        color: black !important;
+
       }
     .LContentCard{
         position: relative;
