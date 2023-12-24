@@ -28,7 +28,7 @@ function App() {
               </Col>
               <Col>
                 <Routes>
-                  <Route path="/" element={<TitlePage />} />
+                  <Route path="/" element={<Home />} />
                   <Route path="/about_me" element={<About_Me />} />
                   <Route path="/project" element={<Projects />} />
                   <Route path='/learned' element={<Learned />} />
@@ -43,16 +43,16 @@ function App() {
           {isMobile && (
             <Col>
               <Routes>
-                <Route path="/" element={<TitlePage />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/about_me" element={<About_Me />} />
                 <Route path="/project" element={<Projects />} />
                 <Route path='/learned' element={<Learned />} />
                 <Route path="/education" element={<Education />} />
               </Routes>
-             <LeftNavbar />
             </Col>
           )}
         </Row>
+        <LeftNavbar />
       </div>
     </Router>
   );
