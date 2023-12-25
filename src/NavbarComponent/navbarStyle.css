@@ -95,8 +95,10 @@
 
 @media screen and (min-width: 425px) and (max-width:767px) {
     .vkNavbar{
-        width: auto;
-        margin: 10px !important;
+        width: 500px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        /* margin: 10px !important; */
         padding: 5px;
     }
     .NavHeadingText{
@@ -109,8 +111,9 @@
 }
 @media screen and (min-width: 321px) and (max-width:424px) {
     .vkNavbar{
-        width: auto;
-        margin: 10px !important;
+        width: 350px;
+        margin-left: auto !important;
+        margin-right: auto !important;
         padding: 5px;
     }
     .NavHeadingText{
@@ -123,9 +126,10 @@
 }
 @media screen and (max-width: 320px) {
     .vkNavbar{
-        width: auto;
-        margin: 10px !important;
+        width: 280px;
         padding: 5px;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     .NavHeadingText{
         font-size: 30px;

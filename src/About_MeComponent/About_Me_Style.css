@@ -18,7 +18,7 @@
 {
     font-family: 'Dangrek', monospace;
     position: relative;
-    color: #CCCCFF;
+    color: cornflowerblue;
     font-size: 25px;
     margin-left: 80px !important;
     margin-top: 100px !important;
@@ -198,7 +198,7 @@ li{
         position: relative;
         font-size: 25px;
         text-align: center;
-        /* margin-left: 25px !important; */
+        margin-left: 25px !important;
         margin-top: 100px !important;
     }
     .aboutPageHeading::after
@@ -287,8 +287,8 @@ li{
 
 .aboutPageHeading
 {
-    font-size: 15px;
-    margin-left: 100px;
+    font-size: 25px;
+    margin-left: 10px !important;
     margin-right: auto;
     margin-top: 100px !important;
 }
@@ -300,6 +300,7 @@ li{
     width: 150px;
     margin-left: 10px;
     margin-right: auto;
+    
 }
 
     .about_Me_page {
