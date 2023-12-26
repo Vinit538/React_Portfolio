@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Dangrek&family=Happy+Monkey&family=Kaushan+Script&family=Nova+Square&family=Open+Sans:ital,wght@0,400;1,800&display=swap');
+
+
+
+.ContactPage{
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.ContactHeading{
+    font-family: 'Dangrek', monospace;
+    text-align: center !important;
+    font-size: 60px;
+    color: cornflowerblue;
+}
+.ContactCardMessage{
+    width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 20px;
+    color: cadetblue !important;
+}
+
+.helloButton{
+    width: 150px;
+    margin-top: 20px;
+    background-color:transparent;
+    padding: 15px 40px 15px 40px;
+    border: 0.5px solid aquamarine;
+    color: aquamarine;
+    border-radius: 5px;
+    font-family: 'Share Tech', sans-serif;
+
+}
+.helloButton:hover{
+    box-shadow: 0px 0px 10px cadetblue;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    color: aliceblue;
+    transition:tr;
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width:1024px){
+    .ContactPage{
+        margin-top: 140px !important;
+    }
+    
+    .ContactHeading{
+        font-size: 60px;
+    }
+    .ContactCardMessage{
+        width: 500px !important;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width:767px){
+    .ContactPage{
+        margin-top: 140px !important;
+    }
+    
+    .ContactHeading{
+        font-size: 60px;
+    }
+    .ContactCardMessage{
+        width: 400px !important;
+        font-size: 25px;
+    }
+}
+
+
+@media screen and (min-width: 321px) and (max-width:424px){
+    .ContactPage{
+        margin-top: 140px !important;
+    }
+    
+    .ContactHeading{
+        font-size: 50px;
+    }
+    .ContactCardMessage{
+        width: 300px !important;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .ContactPage{
+        margin-top: 120px !important;
+    }
+    
+    .ContactHeading{
+        font-size: 40px;
+    }
+    .ContactCardMessage{
+        width: 200px !important;
+        font-size: 18px;
+    }
+    
+    .helloButton{
+        width: 120px;
+        margin-top: 20px;
+        padding: 10px 20px 10px 20px;
+        border: 0.5px solid aquamarine;
+    }
+}

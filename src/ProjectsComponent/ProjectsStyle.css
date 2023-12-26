@@ -480,13 +480,12 @@
   display: grid;
   /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   gap: 5px !important;
-  justify-items: center; 
-
+  justify-content: space-around;
   }
 
   .projectsCard{
     border-radius: 3px;
-    width: 350px;
+    width: 300px !important;
     padding: 20px;
     background-color: #002244;
     display: flex;
@@ -533,12 +532,13 @@
 @media screen and (min-width: 1200px) {
   .projectCardGrid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Display three columns on larger screens */
+    gap:5px;
   }
 
 
   .projectsCard{
     border-radius: 3px;
-    width: 350px;
+    width: 350px !important;
     padding: 20px;
     background-color: #002244;
     display: flex;

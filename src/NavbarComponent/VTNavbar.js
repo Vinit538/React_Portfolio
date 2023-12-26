@@ -109,10 +109,11 @@ const VKNavbar = () => {
               </Link>
             </NavItem>
             <NavItem className="navItems">
-              <Link style={{ textDecoration: "none" }}>
+              <Link style={{ textDecoration: "none" }} to="/contact">
                 <span className="navSubHeading">Contact</span>
               </Link>
             </NavItem>
+           
           </Nav>
         </Collapse>
       </Navbar>

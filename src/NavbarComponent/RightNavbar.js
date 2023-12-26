@@ -2,11 +2,11 @@ import React from "react";
 import './navbarStyle.css'
 
 const RightNavbar = () => {
-    const emailAddress ="vinit.cse.rymec@gmail.com"
+  const emailAddress ="vinitkaratagi538@gmail.com"
   return (
     <div className="maildiv">
       <a 
-        href={`mailto:${emailAddress}?subject=Portfolio Inquiry&body=Hi, I'm interested in your portfolio.`}
+        href={`mailto:${emailAddress}?subject=Portfolio Inquiry&body=Hi, Hello`}
         target='_blank' rel='noopener noreferrer'
         className="mailLink"
       >
