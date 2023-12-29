@@ -9,7 +9,7 @@ import {
 
 const Learned = () => {
   return (
-    <div className="LearnedPage">
+    <div className="LearnedPage" id="learned">
       <div>
         <p className="LpageHeading">Some Things I’ve Learnt</p>
       </div>

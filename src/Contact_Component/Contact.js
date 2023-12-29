@@ -8,7 +8,7 @@ const Contact = () => {
     window.location.href = mailtoLink;
   };
   return (
-    <div className="ContactPage">
+    <div className="ContactPage" id="contact">
       <div
         style={{
           display: "flex",

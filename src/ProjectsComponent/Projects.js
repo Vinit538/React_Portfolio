@@ -10,7 +10,7 @@ const Projects = () => {
   const pData = ProjectData;
 
   return (
-    <div className="ProjectsPage project" id="work_id">
+    <div className="ProjectsPage project" id="project">
       <div>
         <p className="pageHeading">Some Things I’ve Built</p>
       </div>

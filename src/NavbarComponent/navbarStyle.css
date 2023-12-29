@@ -109,6 +109,12 @@
     text-shadow: 0 0 20px white;
 }
 
+.navLinkID {
+    cursor: pointer !important;
+    text-decoration: none !important;
+  }
+  
+
 @media screen and (min-width: 425px) and (max-width:767px) {
     .vkNavbar{
         width: 500px;

@@ -7,7 +7,8 @@ import {
   Nav,
   NavItem,
 } from "reactstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 import "./navbarStyle.css";
 const VKNavbar = () => {
@@ -94,27 +95,31 @@ const VKNavbar = () => {
             navbar
           >
             <NavItem className="navItems">
-              <Link style={{ textDecoration: "none" }} to="/about_me">
+              <Link to="about_me" className="navLinkID"
+              smooth={true} duration={800}
+              >
                 <span className="navSubHeading">About Me</span>
               </Link>
             </NavItem>
-            {/* <NavItem className="navItems">
-              <Link style={{ textDecoration: "none" }} to="/education">
-                <span className="navSubHeading">EducationT</span>
-              </Link>
-            </NavItem> */}
             <NavItem className="navItems">
-              <Link style={{ textDecoration: "none" }} to="/learned">
+              <Link  to="learned" className="navLinkID"
+              smooth={true} duration={800}
+              >
                 <span className="navSubHeading">Education</span>
               </Link>
             </NavItem>
             <NavItem className="navItems">
-              <Link style={{ textDecoration: "none" }} to="/project">
+              <Link to="project"   className="navLinkID" 
+                smooth={true} duration={800}
+
+              >
                 <span className="navSubHeading">Project</span>
               </Link>
             </NavItem>
-            <NavItem className="navItems">
-              <Link style={{ textDecoration: "none" }} to="/contact">
+             <NavItem className="navItems">
+              <Link  to="contact" className="navLinkID"
+              smooth={true} duration={800}
+              >
                 <span className="navSubHeading">Contact</span>
               </Link>
             </NavItem>
