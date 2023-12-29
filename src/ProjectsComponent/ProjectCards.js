@@ -1,69 +1,47 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder} from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faUpRightFromSquare} from '@fortawesome/free-solid-svg-icons';
-
+import AllProjects from './AllProjects.js'
 const ProjectCards = () => {
-  return (
+
+    const [pData, setPData] = useState(AllProjects);
+    console.log(pData);
+
+    return (
     <div className='projectCardGrid'>
-        <div className='projectsCard'>
-           <div className='projectCardLinks'>
-              <span className='projectModal projectIcon'><FontAwesomeIcon icon={faFolder} size="2xl"  /></span>
-              <span className='projectLink projectIcon'><FontAwesomeIcon icon={faUpRightFromSquare} size="2xl"/></span>
-              <span className='projectGit projectIcon'><FontAwesomeIcon icon={faGithub} size="2xl" /></span>
-           </div>
-           <div className='projectContent'>
-            <span className='projectCardTitle'>
-                Smart Health Monitoring System
-            </span><br/>
-            <span className='projectCardDescription'>
-                It is IOT based project Which contain energy Hervisting System, run on solor power and also battery 
-                where doctor can also monitor the patient helath condition from online in remotely.
-            </span>
-           </div>
-            <div className='projectSkills'>
-                    IOT, C++, Ardunio, GSM Module
-            </div>
-        </div>
-        <div className='projectsCard'>
-           <div className='projectCardLinks'>
-              <span className='projectModal projectIcon'><FontAwesomeIcon icon={faFolder} size="2xl"  /></span>
-              <span className='projectLink projectIcon'><FontAwesomeIcon icon={faUpRightFromSquare} size="2xl"/></span>
-              <span className='projectGit projectIcon'><FontAwesomeIcon icon={faGithub} size="2xl" /></span>
-           </div>
-           <div className='projectContent'>
-            <span className='projectCardTitle'>
-                Smart Health Monitoring System
-            </span><br/>
-            <span className='projectCardDescription'>
-                It is IOT based project Which contain energy Hervisting System, run on solor power and also battery 
-                where doctor can also monitor the patient helath condition from online in remotely.
-            </span>
-           </div>
-            <div className='projectSkills'>
-                    IOT, C++, Ardunio, GSM Module
-            </div>
-        </div>
-        <div className='projectsCard'>
-           <div className='projectCardLinks'>
-              <span className='projectModal projectIcon'><FontAwesomeIcon icon={faFolder} size="2xl"  /></span>
-              <span className='projectLink projectIcon'><FontAwesomeIcon icon={faUpRightFromSquare} size="2xl"/></span>
-              <span className='projectGit projectIcon'><FontAwesomeIcon icon={faGithub} size="2xl" /></span>
-           </div>
-           <div className='projectContent'>
-            <span className='projectCardTitle'>
-                Smart Health Monitoring System
-            </span><br/>
-            <span className='projectCardDescription'>
-                It is IOT based project Which contain energy Hervisting System, run on solor power and also battery 
-                where doctor can also monitor the patient helath condition from online in remotely.
-            </span>
-           </div>
-            <div className='projectSkills'>
-                    IOT, C++, Ardunio, GSM Module
-            </div>
-        </div>
+       {pData.map((project)=> (
+                <div className='projectsCard' key={project.id}>
+                <div className='projectCardLinks'>
+                   <span className='projectModal projectIcon'><FontAwesomeIcon icon={faFolder} size="2xl"  />{}</span>
+                   <span className='projectLink projectIcon'><FontAwesomeIcon icon={faUpRightFromSquare} size="2xl"/></span>
+                  {project.projectGitLink &&(
+                     <span className='projectGit projectIcon'>  <a
+                     href={project.projectGitLink} target="_blank"rel="noopener noreferrer"
+                   >
+                     <FontAwesomeIcon
+                       icon={faGithub}
+                       size="2xl"
+                       className="projectIcon"
+                     />
+                   </a></span> 
+                  )}
+                </div>
+                <div className='projectContent'>
+                 <span className='projectCardTitle'>
+                    {project.projectTitle}
+                 </span><br/>
+                 <span className='projectCardDescription'>
+                    {project.projectDescription}
+                 </span>
+                </div>
+                 <div className='projectSkills'>
+                         {project.projectSkills}
+                 </div>
+             </div>
+
+            ))}
     </div>
   )
 }

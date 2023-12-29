@@ -37,7 +37,7 @@ const Learned = () => {
           </div>
         </div>
         <div className="CardSection">
-          <div className="LContentCard internCard">
+          <div className="LContentCard">
             <span>
                 <FontAwesomeIcon icon={faAddressCard} className="icon" />
                 <span><span className="ilightText">{" "}Pantech Solution : <br/></span>
@@ -54,7 +54,7 @@ const Learned = () => {
             </span>
           </div>
 
-          <div className="LHeadingCard internHeading">
+          <div className="LHeadingCard">
           <h1 className="LHeadingCardText">               
                 InternShip
             </h1>

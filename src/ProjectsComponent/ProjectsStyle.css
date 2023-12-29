@@ -479,23 +479,25 @@
   .projectCardGrid{
   display: grid;
   /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
-  gap: 5px !important;
+  gap: 20px !important;
   justify-content: space-around;
   }
 
   .projectsCard{
     border-radius: 3px;
     width: 300px !important;
+    height: 400px !important;
     padding: 20px;
     background-color: #002244;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
   .projectsCard:hover{
     transform: translate(0%,-3%);
     transition: transform 0.3s ease-out !important;
-    /* box-shadow: 0 0 10px aqua; */
+    box-shadow: 0 0 10px cornflowerblue;
   }
 
   .projectCardLinks{
@@ -538,7 +540,7 @@
 
   .projectsCard{
     border-radius: 3px;
-    width: 350px !important;
+    width: 450px !important;
     padding: 20px;
     background-color: #002244;
     display: flex;
@@ -576,8 +578,6 @@
 
 @media screen and (min-width: 321px) and (max-width: 424px){
   .projectCardGrid {
-    /* grid-template-columns: 1fr;  
-    gap:20px !important; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -609,7 +609,8 @@
   }
   .projectsCard
   {
-    width: 250px;
+    width: 250px !important;
+    height: 450px !important;
   }
   .ProjectOne{
     padding: 1px;

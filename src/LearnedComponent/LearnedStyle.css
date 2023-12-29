@@ -54,8 +54,17 @@
     justify-items: center;
     align-items: center;
     font-family: Yatra One;
-    box-shadow: 0 0 20px #00000033;
+    box-shadow: 0 0 20px #00000033 ;
     
+}
+.LContentCard2
+{
+    width: 400px !important;
+    height: 200px !important;
+    justify-items: center ! ;
+    align-items: center !important;
+    font-family: Yatra One !important;
+    box-shadow: 0 0 20px #00000033 !important; 
 }
 .LHeadingCardText{
     position: relative;
@@ -76,13 +85,27 @@
     box-shadow: 0px 0px 10px azure !important;
   }
 
-  .internHeading:hover ~ .CardSection .internCard {
+  .LHeadingCard2:hover +.LContentCard2 {
     color: white !important;
-    transform: translate(0%, -5%) !important;
+    transform: translate(0%,-5%) !important;
     box-shadow: 0px 0px 10px azure !important;
-}
+  }
 
 .LContentCard{
+    box-shadow: 0 0 20px #00000033;
+    width: 350px !important;
+    height: auto !important;
+    padding: 40px;
+    background-color: #15315f;
+    font-family: 'Share Tech', sans-serif;
+    color: #008B8B;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-out;
+}
+
+.LContentCard2{
     box-shadow: 0 0 20px #00000033;
     width: 350px;
     height: auto;
