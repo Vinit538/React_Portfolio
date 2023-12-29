@@ -75,6 +75,22 @@
     box-shadow: 0 0 20px aqua; 
   }
 
+  .ResumeButton{
+    width: 120px;
+    padding: 10px 20px 10px 20px;
+    background-color: transparent;
+    color: cornflowerblue;
+    font-family: 'Space Mono', monospace;
+    border: 1px solid cadetblue;
+    border-radius: 5px;
+    transition: transform 0.5s ease-out !important;
+  }
+
+  .ResumeButton:hover{
+    box-shadow: 0px 0px 10px aqua;
+    color: white;
+    border-color: white;
+  }
 .navbarToggler{
     outline: none !important;
     border: none !important;

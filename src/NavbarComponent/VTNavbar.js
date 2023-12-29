@@ -64,6 +64,12 @@ const VKNavbar = () => {
     };
   }, []);
 
+
+  const Resume ='./Resume/VINIT K - BE.pdf';
+  const handelResume =()=>{
+    window.open(Resume,'_blank');
+  }
+
   return (
     <div>
       <Navbar fixed="top" expand="md" className="vkNavbar" id="vkNavbar">
@@ -72,7 +78,6 @@ const VKNavbar = () => {
             <Link to="/" style={{textDecoration:'none'}}>
               <span className="navHead">
                 <span className="NavHeadingText">Vinit K</span>
-                {/* <img src="../logos/vlogo20.png" className="navHeadLogo" /> */}
               </span>
             </Link>
           </NavItem>
@@ -113,6 +118,7 @@ const VKNavbar = () => {
                 <span className="navSubHeading">Contact</span>
               </Link>
             </NavItem>
+            <button className="ResumeButton" onClick={handelResume}>Resume</button>
            
           </Nav>
         </Collapse>

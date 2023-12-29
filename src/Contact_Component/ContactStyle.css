@@ -5,6 +5,7 @@
 .ContactPage{
     margin-top: 200px;
     margin-bottom: 50px;
+    margin-bottom: 200px;
 }
 
 .ContactHeading{
@@ -28,8 +29,8 @@
     margin-top: 20px;
     background-color:transparent;
     padding: 15px 40px 15px 40px;
-    border: 0.5px solid aquamarine;
-    color: aquamarine;
+    border: 0.5px solid cadetblue;
+    color: cadetblue;
     border-radius: 5px;
     font-family: 'Share Tech', sans-serif;
 
