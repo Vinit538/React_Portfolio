@@ -5,7 +5,7 @@ const AllProjects=[
     projectTitle:'Student Management System Application',
     projectDescription:' This is Back End Project it is Developed in Spring boot application using HTML,CSS and MySQL for performing CRUD operations in a Student Management System.',
     projectSkills:'Java, Spring Boot, My Sql,HTML,CSS',
-    projectGitLink:'',
+    projectGitLink:'https://github.com/Vinit538/StudentManagementSystem',
     projectWebLink:'',
     projectFolderLink:''
 },
@@ -32,7 +32,7 @@ const AllProjects=[
     projectTitle:'Smart Health Monitoring System',
     projectDescription:'It is IOT based project Which contain energy Hervisting System, run on solor power and also battery where doctor can also monitor the patient helath condition from online in remotely.',
     projectSkills:'IOT, C++, Ardunio, GSM Module',
-    projectGitLink:'',
+    projectGitLink:'https://github.com/Vinit538/Smart-Health-Monitoring-System-Project',
     projectWebLink:'',
     projectFolderLink:''
 },

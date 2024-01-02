@@ -137,7 +137,7 @@
 
   .projectIcon:hover{
     color: turquoise !important;
-    transform: translate(10%,-10%);
+    /* transform: translate(10%,-10%); */
     transition: transform 0.3s ease-out;
 
   }
@@ -190,14 +190,14 @@
   .pageHeading
   {
       position: relative;
-      color: #CCCCFF;
-      font-size: 30px !important;
+      color: cornflowerblue;
+      font-size: 25px !important;
       margin-left: 40px !important;
   }
   .pageHeading::after
   {
-    left:300px;
-    width: 350px !important;
+    left:250px;
+    width: 500px !important;
   }
 
   .projectImage{
@@ -251,13 +251,13 @@
     {
         position: relative;
         color: #CCCCFF;
-        font-size: 30px !important;
-        margin-left: 40px !important;
+        font-size: 25px !important;
+        margin-left: 20px !important;
     }
     .pageHeading::after
     {
-      left:300px;
-      width: 350px !important;
+      left:250px;
+      width: 400px !important;
     }
   
     .projectImage{
@@ -323,13 +323,15 @@
   {
       position: relative;
       color: cornflowerblue;
-      font-size: 30px !important;
+      font-size: 25px !important;
       margin-left: 20px !important;
   }
   .pageHeading::after
   {
     content: none;
   }
+
+  
 
   .projectImage{
     width: 280px;
@@ -400,25 +402,30 @@
   
   .ProjectsPage{
     margin-top: 120px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    top:20% !important;
+
   }
   .pageHeading
   {
       position: relative;
       color: cornflowerblue;
-      font-size: 20px !important;
+      font-size: 25px !important;
       margin-left: 20px !important;
   }
   .pageHeading::after
   {
     content: none;
   }
-
+.projectContainer{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
   .projectImage{
     width: 250px;
     height: 400px;
-    transform: translate(5%, 0%);
+    transform: translate(5%, 0%) !important;
     mix-blend-mode: multiply;
   }
   .projectImage2{

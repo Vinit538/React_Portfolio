@@ -184,6 +184,23 @@ li{
         padding: 15px;
         filter: grayscale(80%);
     }
+    .aboutPageHeading
+    { 
+        font-size: 25px;
+        margin-left: 80px !important;
+        margin-top: 100px !important;
+    }
+    .aboutPageHeading::after
+    {
+        content: '';
+        position: absolute;
+        top:50%;
+        left: 120px;
+        right: auto;
+        width: 650px;
+        height: 0.5px !important;
+        background-color: cornflowerblue;
+    }
 }
 
 @media screen and (min-width: 425px) and (max-width:767px) {
@@ -209,7 +226,7 @@ li{
         left: 110px;
         right: auto;
         height: 0.5px;
-        width: clamp(250px, 75%, 350px);
+        width: 350 !important;
     }
     .about_Me_page {
         display: flex;
@@ -281,7 +298,8 @@ li{
 @media screen and (max-width: 320px) {
 
 .about_Me{
-    margin-top: 90px;
+    margin-top: 90px !important;
+    margin-left: -20px;
 }
 
 
@@ -290,7 +308,7 @@ li{
     font-size: 25px;
     margin-left: 10px !important;
     margin-right: auto;
-    margin-top: 100px !important;
+    margin-top: 200px !important;
 }
 .aboutPageHeading::after
 {

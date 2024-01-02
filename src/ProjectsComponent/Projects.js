@@ -6,6 +6,10 @@ import { faFolder } from "@fortawesome/free-regular-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import ProjectData from "./ProjectData.js";
+import { Tooltip as ReactTooltip } from "react-tooltip";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
+
 const Projects = () => {
   const pData = ProjectData;
 
@@ -63,6 +67,7 @@ const Projects = () => {
                       icon={faUpRightFromSquare}
                       size="2xl"
                       className="projectIcon"
+                      data-tooltip-id="ExternalLink"
                     />
                   </a>
                 </span>
@@ -76,6 +81,7 @@ const Projects = () => {
                       icon={faGithub}
                       size="2xl"
                       className="projectIcon"
+                      data-tooltip-id="gitLink"
                     />
                   </a>
                 </span>
@@ -123,6 +129,7 @@ const Projects = () => {
                       icon={faUpRightFromSquare}
                       size="2xl"
                       className="projectIcon"
+                      data-tooltip-id="ExternalLink"
                     />
                   </a>
                 </span>
@@ -136,6 +143,7 @@ const Projects = () => {
                       icon={faGithub}
                       size="2xl"
                       className="projectIcon"
+                      data-tooltip-id="gitLink"
                     />
                   </a>
                 </span>
@@ -207,6 +215,7 @@ const Projects = () => {
                       icon={faGithub}
                       size="2xl"
                       className="projectIcon"
+                      data-tooltip-id="gitLink"
                     />
                   </a>
                 </span>
@@ -215,7 +224,20 @@ const Projects = () => {
           </div>
         </div>
       </div>
+      <ReactTooltip
+        id="gitLink"
+        place="bottom"
+        content="Git Link"
+        variant="info"
+      />
+      
       <ProjectCards />
+      <ReactTooltip
+        id="ExternalLink"
+        place="bottom"
+        content="External Link"
+        variant="info"
+      />
     </div>
   );
 };

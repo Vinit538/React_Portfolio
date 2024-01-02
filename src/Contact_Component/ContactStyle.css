@@ -92,7 +92,8 @@
 }
 @media screen and (max-width: 320px) {
     .ContactPage{
-        margin-top: 120px !important;
+        margin-top: 280px !important;
+        margin-bottom: -5px !important;
     }
     
     .ContactHeading{

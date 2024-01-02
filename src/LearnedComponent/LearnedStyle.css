@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 40px;
+    gap: 80px !important;
 }
 
 .CardSection{
@@ -47,26 +47,31 @@
     align-items: center;
     gap: 40px;
 }
+.CardSection2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+}
 
-.LHeadingCard{
+.LHeadingCard,.LHeadingCard2{
     width: 400px;
     height: 200px;
     justify-items: center;
     align-items: center;
     font-family: Yatra One;
-    box-shadow: 0 0 20px #00000033 ;
-    
+    box-shadow: 0 0 20px #00000033 ;    
 }
-.LContentCard2
-{
-    width: 400px !important;
-    height: 200px !important;
-    justify-items: center ! ;
-    align-items: center !important;
-    font-family: Yatra One !important;
-    box-shadow: 0 0 20px #00000033 !important; 
+.LContentCard2:hover{
+    color: white;
+    box-shadow: 0px 0px 20px aqua !important;
+    transform: translate(0%,-5%) !important;
+
 }
-.LHeadingCardText{
+
+.LHeadingCardText,.LHeadingCardText2{
     position: relative;
     top: 25%;
     font-size: 70px;
@@ -85,13 +90,13 @@
     box-shadow: 0px 0px 10px azure !important;
   }
 
-  .LHeadingCard2:hover +.LContentCard2 {
+  .LHeadingCard2:hover +.LContentCard2{
     color: white !important;
     transform: translate(0%,-5%) !important;
     box-shadow: 0px 0px 10px azure !important;
   }
 
-.LContentCard{
+.LContentCard,.LContentCard2{
     box-shadow: 0 0 20px #00000033;
     width: 350px !important;
     height: auto !important;
@@ -105,19 +110,7 @@
     transition: transform 0.3s ease-out;
 }
 
-.LContentCard2{
-    box-shadow: 0 0 20px #00000033;
-    width: 350px;
-    height: auto;
-    padding: 40px;
-    background-color: #15315f;
-    font-family: 'Share Tech', sans-serif;
-    color: #008B8B;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease-out;
-}
+
 
 .icon{
     color: aqua;
@@ -127,11 +120,32 @@
   
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .LHeadingCard{
+    .LpageHeading
+    {
+  
+        color: cornflowerblue;
+        font-size: 25px;
+        margin-left: 40px !important;
+    }
+    .LpageHeading::after
+    {
+        content: '';
+        position: absolute;
+        top:50%;
+        left:300px;
+        right: auto;
+        width: 550px;
+        height: 0.5px !important;
+        background-color: cornflowerblue;
+    }
+    
+    
+    
+    .LHeadingCard,.LHeadingCard2{
         width: 300px;
         height: 200px;
     }
-    .LHeadingCardText{
+    .LHeadingCardText,.LHeadingCardText2{
         position: relative;
         top: 30%;
         font-size: 50px;
@@ -143,25 +157,26 @@
        
       }
     
-    .LContentCard{
+    .LContentCard,.LContentCard2{
         box-shadow: 0 0 20px #00000033;
         width: 300px;
     }
 }
 
 @media screen and (min-width: 425px) and (max-width: 767px) {
-    .CardSection{
+    .CardSection,.CardSection2{
         display: flex;
         flex-direction: column;
         gap: 0px;
     }
+  
 
     .LpageHeading
     {
         font-family: 'Dangrek', monospace;
         position: relative;
         color: cornflowerblue;
-        font-size: 20px;
+        font-size: 25px;
         margin-left: 20px !important;
     }
     .LpageHeading::after
@@ -169,14 +184,14 @@
         content: '';
         position: absolute;
         top:50%;
-        left:220px;
+        left:280px;
         right: auto;
-        width: 400px;
+        width: 340px;
         height: 0.5px !important;
         background-color: cornflowerblue;
     }
     
-    .LHeadingCard{
+    .LHeadingCard,.LHeadingCard2{
         width: 300px;
         height: 200px;
         mix-blend-mode: multiply;
@@ -184,15 +199,25 @@
     .LHeadingCard:hover {
         mix-blend-mode: normal !important;
     }
+    .LHeadingCard2:hover{
+        mix-blend-mode: normal !important;
+    }
     .LHeadingCard:hover + .LContentCard{
         box-shadow: 0px 0px 10px cadetblue;
     }
-    .LHeadingCardText{
+
+    .LContentCard2:hover{
+        transform: translate(0%,5%) !important;
+        box-shadow: 0px 0px 10px cadetblue !important;
+    }
+
+
+    .LHeadingCardText,.LHeadingCardText2{
         position: relative;
         top: 30%;
         font-size: 50px;
       }
-    .LContentCard{
+    .LContentCard.LContentCard2{
         position: relative;
         box-shadow: 0 0 20px #00000033;
         width: auto;
@@ -203,7 +228,7 @@
 
 
 @media screen and (min-width: 320px) and (max-width: 424px) {
-    .CardSection{
+    .CardSection,.CardSection2{
         display: flex;
         flex-direction: column;
         gap: 0px;
@@ -217,51 +242,63 @@
     .LpageHeading::after
     {
         content: none;
+        
     }
     
-    .LHeadingCard{
+    .LHeadingCard,.LHeadingCard2{
         width: 250px;
         height: 150px;
         mix-blend-mode: multiply;
     }
-    .LHeadingCardText{
+    .LHeadingCardText,.LHeadingCardText2{
         position: relative;
         top: 30%;
         font-size: 40px;
         color: black;
       }
-    .LContentCard{
+    .LContentCard,.LContentCard2{
         position: relative;
         box-shadow: 0 0 20px #00000033;
-        width: auto;
+        width: 280px !important;
         z-index: 2;
         background-color: transparent;
-        font-size: 18px;
-        padding: 15px;
+        font-size: 18px !important;
+        padding: 10px;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+    .LContentCard2:hover{
+        transform: translate(0%,5%) !important;
+        box-shadow: 0px 0px 10px cadetblue !important;
     }
 }
 
 
 @media screen and (max-width: 320px) {
+    .LearnedPage{        
+        margin-top: 200px !important;
+     }
 
     .LpageHeading
     {
-        font-size: 20px;
-        margin-left: 20px !important;
+        font-size: 25px;
+        margin-left: -30px !important;
         color: cornflowerblue;
+        margin-left: -20px !important;
+        /* margin-right: auto !important; */
     }
     .LpageHeading::after
     {
         content: none;
     }
     
-    .CardSection{
+    .CardSection,.CardSection2{
         display: flex;
         flex-direction: column;
         gap: 0px;
     }
     
-    .LHeadingCard{
+    .LHeadingCard,.LHeadingCard2{
         width: 200px;
         height: 100px;
         mix-blend-mode: multiply;
@@ -269,18 +306,22 @@
     .LHeadingCard:hover + .LContentCard{
         box-shadow:0px 0px 20px aqua;
     }
-    .LHeadingCardText{
+    .LHeadingCardText,.LHeadingCardText2{
         position: relative;
         top: 30%;
         font-size: 30px;
         z-index: 2;
         color: black !important;
-
       }
-    .LContentCard{
+
+      .LContentCard2:hover{
+        transform: translate(0%,5%) !important;
+        box-shadow: 0px 0px 10px cadetblue !important;
+    }
+    .LContentCard,.LContentCard2{
         position: relative;
         box-shadow: 0 0 20px #00000033;
-        width: 200px;
+        width: 200px !important;
         z-index: 2;
         background-color: transparent;
         font-size: 15px;

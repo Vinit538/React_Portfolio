@@ -126,14 +126,14 @@
 
   .introText {
     font-size: 15px;
-    width: 500px;
+    width: 320px !important;
   }
 }
 
 @media screen and (max-width: 320px) {
   .titlePage {
     position: relative;
-    margin-top: 40px;
+    margin-top: 50px !important;
     margin-left: -10px !important;
   }
 
@@ -151,6 +151,7 @@
   }
 
   .introText {
+    padding: 5px;
     font-size: 15px;
     width: auto;
   }
