@@ -66,7 +66,7 @@ const VKNavbar = () => {
   }, []);
 
 
-  const Resume ='./Resume/VINIT K - BE.pdf';
+  const Resume ='./Resume/VINIT K _BE.pdf';
   const handelResume =()=>{
     window.open(Resume,'_blank');
   }
